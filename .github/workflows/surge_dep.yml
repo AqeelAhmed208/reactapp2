@@ -38,5 +38,5 @@ jobs:
       run: npm install --golobal surge
      
     - name: Deploy to surge 
-      run: surge ./build reactapp2.surge.sh ${{secrets.SURGE_TOKEN2}}
+      run: surge ./build reactapp2.surge.sh ${{ secrets.SURGE_TOKEN2 }}
         
