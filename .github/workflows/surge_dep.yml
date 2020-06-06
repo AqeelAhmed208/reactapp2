@@ -21,6 +21,7 @@ jobs:
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
+      
     - name: Install NodeJS
     - uses: actions/setup-node@v2-beta
       with: 
@@ -37,5 +38,5 @@ jobs:
       run: npm install --golobal surge
      
     - name: Deploy to surge 
-      run: surge ./build reactapp2.surge.sh ${{secreats.SURGE_TOKEN2}}
+      run: surge ./build reactapp2.surge.sh ${{secrets.SURGE_TOKEN2}}
         
